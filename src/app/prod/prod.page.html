@@ -1,0 +1,152 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrar Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-slides pager="true">
+
+    <ion-slide>
+        <ion-card style="--padding-start: 30px;
+        --padding-end: 30px;
+        --padding-top: 50px;
+        text-align: center; padding-bottom: 20px;
+        width: 350px;">
+                    
+          <ion-item style="color: #000; background: turquoise;">
+            <ion-label position="floating">Nombre de marca</ion-label>
+            <ion-input [(ngModel)]="prod.nombreMarca" name="nombreMarca" type="text"></ion-input>
+          </ion-item>
+          <ion-item style="color: #000; background: turquoise;">
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input [(ngModel)]="prod.nombre" name="nombre" type="text"></ion-input>
+          </ion-item>
+          <ion-item style="color:  #000; background: turquoise;">
+            <ion-label position="floating">Descripción</ion-label>
+            <ion-input [(ngModel)]="prod.descripcion" name="descripcion" type="text"></ion-input>
+          </ion-item>
+          <ion-item style="color:  #000; background: turquoise;">
+            <ion-label position="floating">Precio</ion-label>
+            <ion-input [(ngModel)]="prod.precio" name="precio" type="number"></ion-input>
+          </ion-item>
+
+
+          <div style="display: flex; justify-content: center; margin: 20px;">
+            <ion-button (click)="altaProducto()">Registrar</ion-button>
+          </div>                      
+
+
+          <div style="display: flex; justify-content: center;">
+            <strong style="padding-top: 10px; color:  #000;">Ver productos:</strong>
+            <ion-toggle color="primary" #toggle></ion-toggle>
+          </div>
+          
+          <ion-list class="white" *ngIf="toggle.checked">
+            <ion-item style="background-color: cornflowerblue; margin: 10px;" *ngFor="let r of producto">
+              <ion-icon name="body-outline" style="color: #000;" slot="start"></ion-icon>
+              <div>
+                <p style="color:  #000">{{ r.nombre }}</p>
+                <p style="color:  #000">{{ r.nombreMarca }}</p>
+                <p style="color:  #000">{{ r.descripcion }}</p>                
+                <p style="color:  #000">{{ r.precio }}</p>      
+
+              </div>
+            </ion-item>    
+          </ion-list>
+        </ion-card>
+
+    </ion-slide>
+      
+    <ion-slide>
+        <ion-card style="--padding-start: 30px;
+        --padding-end: 30px;
+        --padding-top: 50px;
+        text-align: center; padding-bottom: 20px;
+        width: 350px;">
+          
+          <ion-item style="color:  #000; background: turquoise;">
+            <ion-label position="floating">Nombre de marca</ion-label>
+            <ion-input [(ngModel)]="prod.nombreMarca" name="nombreMarca" type="text"></ion-input>
+          </ion-item>
+          <ion-item style="color:  #000; background: turquoise;">
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input [(ngModel)]="prod.nombre" name="nombre" type="text"></ion-input>
+          </ion-item>
+          <ion-item style="color:  #000; background: turquoise;">
+            <ion-label position="floating">Descripción</ion-label>
+            <ion-input [(ngModel)]="prod.descripcion" name="descripcion" type="text"></ion-input>
+          </ion-item>
+          <ion-item style="color:  #000; background: turquoise;">
+            <ion-label position="floating">Precio</ion-label>
+            <ion-input [(ngModel)]="prod.precio" name="precio" type="number"></ion-input>
+          </ion-item>
+
+          <div style="display: flex; justify-content: center; margin: 20px;">
+            <ion-button (click)="editar()">Editar</ion-button>
+          </div> 
+
+          <div style="display: flex; justify-content: center;">
+            <strong style="padding-top: 10px; color:  #000;">Ver productos:</strong>
+            <ion-toggle color="primary" #toggle2></ion-toggle>
+          </div>
+          
+          <ion-list class="white" *ngIf="toggle2.checked">
+            <ion-item style="background-color: cornflowerblue; margin: 10px;" *ngFor="let r of producto">
+              <ion-icon name="body-outline" style="color:  #000;" slot="start"></ion-icon>
+              <div>
+                <p style="color:  #000">{{ r.nombre }}</p>
+                <p style="color:  #000">{{ r.nombreMarca }}</p>
+                <p style="color:  #000">{{ r.descripcion }}</p>                
+                <p style="color:  #000">{{ r.precio }}</p>             
+                <ion-button (click)="select(r._id)">Seleccionar</ion-button>       
+              </div>
+            </ion-item>    
+          </ion-list>
+
+        </ion-card>
+    </ion-slide>
+
+
+    <ion-slide>
+        <ion-card style="--padding-start: 30px;
+        --padding-end: 30px;
+        --padding-top: 50px;
+        text-align: center; padding-bottom: 20px;
+        width: 300px;">
+                   
+            <div style="display: flex; justify-content: center; margin: 20px;">
+              <ion-button color="danger" (click)="eliminar()">Eliminar</ion-button>              
+            </div>        
+          
+          <div style="display: flex; justify-content: center;">
+            <strong style="padding-top: 10px; color:  #000;">Ver productos:</strong>
+            <ion-toggle color="primary" #toggle3></ion-toggle>
+          </div>
+          
+          <ion-list class="white" *ngIf="toggle3.checked">
+            <ion-item style="background-color: cornflowerblue; margin: 10px;" *ngFor="let r of producto">
+              <ion-icon name="body-outline" style="color:  #000;" slot="start"></ion-icon>
+              <div>
+                <p style="color: #000">{{ r.nombre }}</p>
+                <p style="color: #000">{{ r.nombreMarca }}</p>
+                <p style="color: #000">{{ r.descripcion }}</p>                
+                <p style="color: #000">{{ r.precio }}</p>             
+                <ion-button (click)="select(r._id)">Seleccionar</ion-button>       
+              </div>
+            </ion-item>    
+          </ion-list>
+
+        </ion-card>
+    </ion-slide>
+
+  </ion-slides>
+  <!-- <div class="ion-padding">
+    <ion-button expand="full" (click)="camara()">
+      Take Snap
+    </ion-button>
+   
+    <img [src]="tempImg" />
+  </div> -->
+</ion-content>

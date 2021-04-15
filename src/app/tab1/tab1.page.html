@@ -1,0 +1,179 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-title>
+      Postres
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Recetario de postres</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <app-explore-container name="Tab 1 page"></app-explore-container>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-slide><img src="../../assets/b1.jpg"></ion-slide>
+      <br>
+      <ion-card-title>Brownies</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <h3>Ingredientes</h3>
+      <ul>
+        <li>60 g de cacao en polvo.</li>
+        <li>113 g de mantequilla sin sal.</li>
+        <li>2 huevos.</li>
+        <li>125 g de azúcar estandar.</li>
+        <li>30 g de harina de trigo (se puede sustituir por harina de: 
+          almendra, coco, avena, etc.).</li>
+        <li>E ml de esencia de vainilla.</li>
+        <li>Pizca de sal.</li>
+        <li>Toppings al gusto</li>
+      </ul>
+      <h3>Utencilios y moldes</h3>
+      <ul>
+        <li>Bowl grande y uno pequeño.</li>
+        <li>Batidora o batidor globo.</li>
+        <li>Molde para hornear.</li>
+        <li>Papel encerado.</li>
+      </ul>
+      <h3>Procedimiento</h3>
+      <ul>
+        <li>Precalentar el horno a 165°C.</li>
+        <li>Cubrir con el papel encerado el 
+          molde para hornear.
+        </li>
+        <li>Derretir la mantequilla junto con
+           el cacao en polvo a fuego lento.
+          Hasta conseguir una mezcla homogénea.</li>
+        <li>Hechar los huevos en el bowl grande de uno a 
+          uno, junto con la vainilla, comenar a 
+        incorporar con la batidora o batidor globo.</li>
+        <li>Mezclar la harina con el azúcar, sal y toppings.</li>
+        <li>Incorporar a la mezcla de cacao y remover 
+          con suavidad, hasta obtener una masa homogenea sin grumos.</li>
+        <li>LLenar el molde con la mezcla.</li>
+        <li>Hornear durante 30 a 40 min.</li>
+        <li>Esperar a que enfrie para servir.</li>
+      </ul>
+    </ion-card-content>
+
+    <ion-button color="danger" (click)="handleLike()">{{LikeValue}}
+      <ion-icon name="heart-outline"></ion-icon>
+    </ion-button>
+    <ion-button color="danger" (click)="handleDislike()">{{DislikeValue}}
+      <ion-icon name="heart-dislike-outline"></ion-icon>
+    </ion-button>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-slide><img src="../../assets/pay-manzana.jpg"></ion-slide>
+      <br>
+      <ion-card-title>Pay de manzana</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <h3>Ingredientes</h3>
+      <ul>
+        <li>500gr de masa para pay preparada.</li>
+        <li>7 tazas de manzanas peladas y cortadas
+           en rebanadas delgadas</li>
+        <li>1 taza de Splenda® Original Granulado.</li>
+        <li>3 cucharadas de fécula de maíz.</li>
+        <li>¾ cucharadita de canela.</li>
+        <li>¼ cucharadita de nuez moscada.</li>
+        <li>⅛ cucharadita de sal.</li>
+      </ul>
+      
+      <h3>Procedimiento</h3>
+      <ul>
+        <li>Una vez que tengas listos todos los ingredientes 
+          para el pay de manzana, precalienta 
+          el horno a 425 Fº o 218 Cº.</li>
+        <li>Después coloca una capa de masa
+           para pay dentro del molde.
+        </li>
+        <li>Posteriormente introduce las manzanas dentro de un tazón
+           grande y reserva. Mezcla el Splenda® Original Granulado
+            con la fécula de maíz, la canela, la nuez moscada y la sal
+             en un recipiente pequeño.</li>
+        <li>Espolvorea la mezcla sobre las manzanas y mezcla.</li>
+        <li>Mezclar la harina con el azúcar, sal y toppings.</li>
+        <li>Coloca la mezcla de manzanas sobre la masa para pay. 
+          Después procede a poner una segunda capa de esta misma
+           mezcla sobre las manzanas. 
+           Sella las orillas y corta el excedente.</li>
+        <li>Haz pequeñas hendiduras en la parte de arriba.</li>
+        <li>Finalmente hornea de 40-50 min hasta que la masa de arriba
+          esté doradita. Puedes servirlo caliente o frío según él gusto.</li>
+          <li>TIP: Puedes agregar pasitas a la mezcla de manzanas para 
+            agregarle un toque extra.</li>
+      </ul>
+    </ion-card-content>
+
+    <ion-button color="danger" (click)="handleLike()">{{LikeValue}}
+      <ion-icon name="heart-outline"></ion-icon>
+    </ion-button>
+    <ion-button color="danger" (click)="handleDislike()">{{DislikeValue}}
+      <ion-icon name="heart-dislike-outline"></ion-icon>
+    </ion-button>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-slide><img src="../../assets/gelatina.jpg"></ion-slide>
+      <br>
+      <ion-card-title>Gelatina de mosaico individual.</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <h3>Ingredientes</h3>
+      <ul>
+        <li>4 tazas de leche de vaca, muy caliente.</li>
+        <li>1/4 tazas de gelatina, de mora azul.</li>
+        <li>1/4 tazas de gelatina de limón.</li>
+        <li>1/4 tazas de gelatina de mango.</li>
+        <li>1/4 tazas de gelatina de frutos rojos.</li>
+        <li>4 tazas de agua, muy caliente.</li>
+        <li>1 taza de gelatina de piña.</li>
+      </ul>
+      
+      <h3>Procedimiento</h3>
+      <ul>
+        <li>Divide en 4 recipientes la leche caliente y agrega
+          en cada uno la gelatina de mora azul, la de limon,
+          la de frutos rojos respectivamente. Vacía en los moldes
+          para refrigerar y enfriar por 1 hora hasta cuajar. 
+        </li>
+        <li>Desmolda las gelatinas y corta en cubos uniformes.
+          Reserva.</li>
+        <li>Mezcla el agua caliente con la gelatina de piña;
+          retira del fuego y espera a que se entibie a
+          temperatura ambiente.
+        </li>
+        <li>Acomoda los cubos de gelatinas de sabores en un molde,
+          agrega la gelatina de agua líquida en cada molde y 
+          refrigera por una hora. Desmola, sirve y disfruta.
+        </li>
+      </ul>
+    </ion-card-content>
+
+    <ion-button color="danger" (click)="handleLike()">{{LikeValue}}
+      <ion-icon name="heart-outline"></ion-icon>
+    </ion-button>
+    <ion-button color="danger" (click)="handleDislike()">{{DislikeValue}}
+      <ion-icon name="heart-dislike-outline"></ion-icon>
+    </ion-button>
+  </ion-card>
+  <!-- <ion-button color="dark" expand="full" (click)="logout()">Cerrar sesión</ion-button> -->
+
+</ion-content>
+
+

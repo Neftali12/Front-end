@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+
+    
+    <ion-title>Registrar Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card >
+            
+    <ion-card-content>
+      <!-- <form #form="ngForm" ngForm="form" (ngSubmit)="registroUsuario(form)">  -->
+
+        <ion-item>
+          <ion-label position="floating" color="dark" >Usuario</ion-label>
+          <ion-input [(ngModel)]="user.usuario" color="dark"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating"color="dark">EMAIL</ion-label>
+          <ion-input type="email" [(ngModel)]="user.email" color="dark" name="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"color="dark">PASSWORD</ion-label>
+          <ion-input type="password" [(ngModel)]="user.password" color="dark" name="password"></ion-input>
+        </ion-item>
+
+        <ion-item class="text">
+          <ion-label>Tipo de usuario</ion-label>
+          <ion-select [(ngModel)]="user.typeUser" placeholder="Select" name="tipo">
+            <ion-select-option value="Usuario">Usuario</ion-select-option>
+            <ion-select-option value="Administrador">Administrador</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-button (click)="registroUsuario()" color="calm" class="boton">Registrar.</ion-button>
+
+      <!-- </form> -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>

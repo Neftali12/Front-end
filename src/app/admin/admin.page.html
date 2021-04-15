@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Admin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      
+        <ion-card style="--padding-start: 30px;
+        --padding-end: 30px;
+        --padding-top: 50px;
+        text-align: center; padding-bottom: 20px;
+        width: 300px;">
+                  
+            <div style="display: flex; justify-content: center; margin: 20px;">
+              <ion-button color="danger" (click)="eliminar()">Eliminar</ion-button>              
+            </div>        
+          
+          <div style="display: flex; justify-content: center;">
+            <strong style="padding-top: 10px; color:  #000;">Ver Usuarios:</strong>
+            <ion-toggle color="primary" #toggle3></ion-toggle>
+          </div>
+          
+          <ion-list class="white" *ngIf="toggle3.checked">
+            <ion-item style="background-color: cornflowerblue; margin: 10px;" *ngFor="let r of usuario">
+              <ion-icon name="body-outline" style="color:  #000;" slot="start"></ion-icon>
+              <div>
+                <p style="color: #000">{{ r.usuario }}</p>
+                <p style="color: #000">{{ r.email }}</p>
+                <p style="color: #000">{{ r.typeUser }}</p>                
+                          
+                <ion-button (click)="select(r._id)">Seleccionar</ion-button>       
+              </div>
+            </ion-item>    
+          </ion-list>
+
+        </ion-card>
+    
+</ion-content>

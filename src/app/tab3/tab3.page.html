@@ -1,0 +1,92 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-title>
+      Tienda
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Productos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+<!-- Comienza la tienda -->
+  <!-- <ion-row> -->
+    <!-- <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-slide><img src="../../assets/alme.png"></ion-slide>
+          <ion-card-subtitle>Okko</ion-card-subtitle>
+          <ion-card-title>Harina de Almendras 400g.</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-badge color="danger">$130</ion-badge>
+          <ul>
+            <li>Gluten free</li>
+            <li>Alto en fibra</li>
+            <li>Alto en proteina</li>
+          </ul>
+        </ion-card-content>
+        <ion-input type="number" value="333"></ion-input>
+        <ion-button color="secondary"><ion-icon name="add-outline"></ion-icon>
+          Añadir</ion-button>
+      </ion-card>
+      
+    </ion-col>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-slide><img src="../../assets/spread.png"></ion-slide>
+          <ion-card-subtitle>Okko</ion-card-subtitle>
+          <ion-card-title>Spread de Avellana con Miel 240g.</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-badge color="danger">$95</ion-badge>
+          <ul>
+            <li>Gluten free</li>
+          </ul>
+        </ion-card-content>
+        <ion-input type="number" value="333"></ion-input>
+        <ion-button color="secondary"><ion-icon name="add-outline"></ion-icon>
+          Añadir</ion-button>
+      </ion-card>
+    </ion-col>
+  </ion-row> -->
+<!--  -->
+  <ion-col>
+    <ion-slides>
+      
+        <ion-slide  *ngFor="let p of resultado">
+          <ion-card style="width: 350px;">
+
+            <ion-card-header>
+              <img src="../../assets/alme.png" style="width: 100px; height: 100px;">
+            </ion-card-header>
+          
+            <ion-card-content style="text-align: center;">
+              
+                <h1>{{p.nombre}}</h1>
+                <h1>{{p.nombreMarca}}</h1>
+                <h1>{{p.descripcion}}</h1>
+                <h1>{{p.precio}}</h1>
+
+              
+            </ion-card-content>
+          </ion-card> 
+          <!-- <ion-input type="number" value="333"></ion-input> -->
+          <!-- <ion-button color="secondary"><ion-icon name="add-outline"></ion-icon>
+            Añadir</ion-button> -->
+        </ion-slide>
+    </ion-slides>
+  </ion-col>
+
+  <ion-button style="display:flex; justify-content: center; text-align: center; margin: 10px;" (click)="btnProd()">Añadir Producto</ion-button>
+  
+
+  
+</ion-content>

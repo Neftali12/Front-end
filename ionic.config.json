@@ -1,0 +1,7 @@
+{
+  "name": "AventonUTA",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

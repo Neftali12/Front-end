@@ -1,0 +1,35 @@
+
+  <ion-header class="body" >
+
+  </ion-header>
+
+  <ion-content style="--padding-start: 30px;
+    --padding-end: 30px;
+    --padding-top: 50px;
+    text-align: center;" >
+ 
+  
+     
+        <img src="../../assets/logo.png" width="200" height="180">
+        <ion-card >
+            
+              <ion-card-content>
+                
+                <ion-item>
+                  <ion-label position="floating">Usuario</ion-label>
+                  <ion-input [(ngModel)]="modelo.usuario" name="usuario" type="text"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Contraseña</ion-label>
+                  <ion-input [(ngModel)]="modelo.password" name="password" type="password"></ion-input>
+                </ion-item>
+                <ion-button (click)="logIn()" color="calm" class="boton">LOG IN</ion-button>
+                <ion-button (click)="registroUsuario()"color="calm" class="boton" [routerLink]="'/new-page'">REGISTRARSE.</ion-button>
+              </ion-card-content>
+        </ion-card>
+      
+
+
+  </ion-content>
+    
+    
